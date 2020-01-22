@@ -22,7 +22,6 @@ def get_guess():
 
 def check_guess(guess, secret):
     '''compare guess and secret, return string describing result of comparison'''
-
     if guess == secret:
         return correct
     if guess < secret:
