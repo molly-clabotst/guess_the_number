@@ -16,18 +16,26 @@ def generate_secret(low, high):
 
 
 def get_guess():
-    '''get user's guess'''
-    return int(input('Guess the secret number? '))
+    # Learned how to do this from this source
+    # https://www.techbeamers.com/use-try-except-python/
+    try:
+        '''get user's guess'''
+        return int(input('Guess the secret number? '))
+    except Exception as ex:
+        print(ex)
 
 
 def check_guess(guess, secret):
-    '''compare guess and secret, return string describing result of comparison'''
-    if guess == secret:
-        return correct
-    if guess < secret:
-        return too_low
-    if guess > secret:
-        return too_high
+    try:
+        '''compare guess and secret, return string describing result of comparison'''
+        if guess == secret:
+            return correct
+        if guess < secret:
+            return too_low
+        if guess > secret:
+            return too_high
+    except Exception as ex:
+        print(ex)
 
 
 def main():
