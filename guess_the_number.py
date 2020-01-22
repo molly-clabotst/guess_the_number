@@ -1,6 +1,6 @@
 import random
 
-correct = 'you guessed correctly!'
+correct = 'you guessed CORRECTLY!'
 too_low = 'too low'
 too_high = 'too high'
 
@@ -36,7 +36,6 @@ def check_guess(guess, secret):
             return too_high
     except Exception as ex:
         print(ex)
-
 
 
 def main():
