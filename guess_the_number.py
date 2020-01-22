@@ -7,7 +7,11 @@ too_high = 'too high'
 
 def configure_range():
     '''Set the high and low values for the random number'''
-    return 1, 20
+    upper = int(input("Enter a number for the highest number the secret number could be.  "))
+    while upper > 100:
+        upper = int(input("Please enter a number that is less than 100.  "))
+    lower = 1
+    return lower, upper
 
 
 def generate_secret(low, high):
