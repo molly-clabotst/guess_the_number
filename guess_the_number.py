@@ -38,18 +38,23 @@ def check_guess(guess, secret):
         print(ex)
 
 
-def main():
 
+def main():
     (low, high) = configure_range()
     secret = generate_secret(low, high)
 
+    attempts = 0
     while True:
         guess = get_guess()
         result = check_guess(guess, secret)
+        attempts += 1
         print(result)
 
         if result == correct:
             break
+
+    print("You succeeded in " +
+          str(attempts) + " wrong attempts!")
 
 
 if __name__ == '__main__':
